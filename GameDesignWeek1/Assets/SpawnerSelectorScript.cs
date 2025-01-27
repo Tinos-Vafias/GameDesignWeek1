@@ -33,10 +33,10 @@ public class SpawnerSelectorScript : MonoBehaviour
         } else
         {
             int random_index = Random.Range(0, spawners.Length);
-            //Spawner selected_spawner = spawners[random_index].GetComponent<Spawner>();
-            //if (selected_spawner is not null)
-            //    selected_spawner.Spawn();
-            //else Debug.LogWarning($"index {random_index} is missing a script");
+            SpawnerBase spawner = spawners[random_index].GetComponent<SpawnerBase>();
+            if (spawner is not null)
+                spawner.Spawn();
+            else Debug.LogWarning($"index {random_index} is missing a script");
 
             timer = 0;
         }

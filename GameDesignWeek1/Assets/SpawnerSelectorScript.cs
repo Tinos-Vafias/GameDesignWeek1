@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerSelector : MonoBehaviour
+public class SpawnerSelectorScript : MonoBehaviour
 {
     public GameObject circle_enemy;
 
@@ -32,7 +32,11 @@ public class SpawnerSelector : MonoBehaviour
             timer += Time.deltaTime;
         } else
         {
-            int randomIndex = Random.RandomRange(0, spawners.Length);
+            int random_index = Random.Range(0, spawners.Length);
+            //Spawner selected_spawner = spawners[random_index].GetComponent<Spawner>();
+            //if (selected_spawner is not null)
+            //    selected_spawner.Spawn();
+            //else Debug.LogWarning($"index {random_index} is missing a script");
 
             timer = 0;
         }

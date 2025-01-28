@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerBottomScript : MonoBehaviour
+public class SpawnerBottomScript : SpawnerBase
 {
     public GameObject circle_enemy;
     public float x_offset;
 
-    public void Spawn()
+    public override void Spawn()
     {
         if (circle_enemy is not null)
         {

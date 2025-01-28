@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test_velocity : MonoBehaviour
+public class CircleBehaviorScript : MonoBehaviour
 {
     private Rigidbody2D rigidBody2d;
     // Start is called before the first frame update
@@ -12,9 +12,8 @@ public class test_velocity : MonoBehaviour
         rigidBody2d.velocity = new Vector2(-5, 3);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        Destroy(gameObject);
     }
 }

@@ -9,7 +9,7 @@ public class test_velocity : MonoBehaviour
     void Start()
     {
         rigidBody2d = GetComponent<Rigidbody2D>();
-        rigidBody2d.velocity = new Vector2(-5, 3);
+        rigidBody2d.velocity = new Vector2(Random.Range(-5,5), Random.Range(-5,5));
     }
 
     // Update is called once per frame

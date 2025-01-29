@@ -11,6 +11,7 @@ public class game_over : MonoBehaviour
     {
         timer = timer * 100;
         timer = MathF.Round(timer);
+        Time.timeScale = 0;
         gameOverScreen.Setup(timer / 100);
     }
     
@@ -18,6 +19,7 @@ public class game_over : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         timer = 0;
     }
 

@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: game over
+    uniqueID: 2748015501
+    locked: 0
